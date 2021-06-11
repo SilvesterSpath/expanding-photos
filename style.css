@@ -5,6 +5,7 @@
 }
 
 body {
+  background-color: rgb(145, 145, 145);
   font-family: 'Muli', sans-serif;
   display: flex;
   align-items: center;
@@ -25,7 +26,7 @@ body {
   background-repeat: no-repeat;
   height: 80vh;
   border-radius: 50px;
-  color: white;
+  color: black;
   cursor: pointer;
   flex: 0.5;
   margin: 10px;
@@ -41,6 +42,17 @@ body {
   opacity: 0;
 }
 
+.panel a {
+  position: absolute;
+  bottom: 46px;
+  left: 200px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  opacity: 0;
+}
+
 .panel.active {
   flex: 5;
 }
@@ -48,6 +60,11 @@ body {
 .panel.active h3 {
   opacity: 1;
   transition: opacity 0.3s ease-in 0.4s;
+}
+
+.panel.active a {
+  opacity: 1;
+  transition: opacity 0.5s ease-in 0.5s;
 }
 
 @media (max-width: 480px) {
